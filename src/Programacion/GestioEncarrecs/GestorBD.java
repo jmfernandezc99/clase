@@ -37,6 +37,16 @@ public class GestorBD {
         return llista;
     }
 
+    public List<Client> cercarClient() throws Exception{
+        Statement cerca = conn.createStatement();
+        ResultSet r = cerca.executeQuery("SELECT * FROM CLIENTS");
+        LinkedList<Client> llista = new LinkedList<>();
+        while (r.next()){
+            llista.add(new Client(r.getInt("ID"), r.getString("NOM"), r.getString("APOSTAL"), r.getString("AELECTRONICA"), r.getString("TELEFON")));
+        }
+        return llista;
+    }
+
     //Método para buscar un producto a partir de un nombre
     public Producte cercarProducte(String nom) throws Exception{
         Statement cerca = conn.createStatement();
@@ -76,6 +86,16 @@ public class GestorBD {
         LinkedList<Producte> llista = new LinkedList<>();
         while (r.next()){
             llista.add(new Producte(r.getInt("ID"), r.getString("NOM"), r.getDouble("PREU"), r.getInt("QUANTITAT")));
+        }
+        return llista;
+    }
+
+    public List<Encarrec> cercarEncarrec() throws Exception{
+        Statement cerca = conn.createStatement();
+        ResultSet r = cerca.executeQuery("SELECT * FROM ENCARRECS");
+        LinkedList<Encarrec> llista = new LinkedList<>();
+        while (r.next()){
+            llista.add(new Encarrec(r.getInt("ID"), r.getDate("DATA"), r.getInt("IDCLIENT")));
         }
         return llista;
     }
