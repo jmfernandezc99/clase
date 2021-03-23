@@ -162,6 +162,8 @@ public class GestorEncarrecs {
 
     //Cerca tots els encàrrecs d'un client a partir del seu ID.
     private void cercarEncarrec() throws Exception {
+        List<Client> clientes = gestor.cercarClient();
+        mostrarClientes(clientes);
         String idString = entrarDades("Introduce el identificador del cliente para ver sus encargos: ");
         int id = Integer.parseInt(idString);
         if (0 == id) return;
