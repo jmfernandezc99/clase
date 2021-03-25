@@ -147,14 +147,16 @@ public class Querys {
         }
         return result;
     }
+
+    // Método para borrar los datos de una persona
     public int borrarPerson(
-            int ID)
+            int id)
     {
         int result = 0;
         // set parameters, then execute
         try
         {
-            borrarPerson.setInt(1,ID);
+            borrarPerson.setInt(1, id);
             // insert the new entry; returns # of rows updated
             result = borrarPerson.executeUpdate();
         }
@@ -165,18 +167,20 @@ public class Querys {
         }
         return result;
     }
+
+    // Método para actualizar los datos de una persona
     public int actualizarPerson(
-            String fname, String lname, String email, String num, int ID)
+            String fname, String lname, String email, String num, int id)
     {
         int result = 0;
         // set parameters, then execute
         try
         {
-            actualizarPerson.setString(1,fname);
-            actualizarPerson.setString(2,lname);
-            actualizarPerson.setString(3,email);
-            actualizarPerson.setString(4,num);
-            actualizarPerson.setInt(5,ID);
+            actualizarPerson.setString(1, fname);
+            actualizarPerson.setString(2, lname);
+            actualizarPerson.setString(3, email);
+            actualizarPerson.setString(4, num);
+            actualizarPerson.setInt(5, id);
             // insert the new entry; returns # of rows updated
             result = actualizarPerson.executeUpdate();
         }
@@ -187,19 +191,8 @@ public class Querys {
         }
         return result;
     }
-    private boolean getid(int id) throws SQLException{
-        boolean result = false;
-        try {
-            getId.setInt(1,id);
-            ResultSet rs = getId.executeQuery();
-            if(rs.next())
-                result = true;
-        } catch (SQLException sqlException){
-            sqlException.printStackTrace();
-            close();
-        }
-        return result;
-    }
+
+    // Genera un ID a partir del último id de la base de datos.
     private int generadorId() throws SQLException{
         //Cercar ID Maxim
         Statement cercaMaxId = connection.createStatement();

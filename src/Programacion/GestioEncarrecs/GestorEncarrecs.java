@@ -121,6 +121,7 @@ public class GestorEncarrecs {
         }
     }
 
+    //Métode per mostrar per pantalla els clients
     private void mostrarClientes(List llista) {
         System.out.println("ID\tNOMBRE\tDPOSTAL\tCORREO\t\t\t\tTELEFONO");
         for (Object c : llista) {

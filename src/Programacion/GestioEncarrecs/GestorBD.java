@@ -37,6 +37,7 @@ public class GestorBD {
         return llista;
     }
 
+    //Métode per cercar dins la base de dades als clients
     public List<Client> cercarClient() throws Exception{
         Statement cerca = conn.createStatement();
         ResultSet r = cerca.executeQuery("SELECT * FROM CLIENTS");
@@ -79,7 +80,7 @@ public class GestorBD {
         return llista;
     }
 
-    //Método para buscar todos los productos
+    //Método para buscar todos los productos en la base de datos
     public List<Producte> cercarProducte() throws Exception{
         Statement cerca = conn.createStatement();
         ResultSet r = cerca.executeQuery("SELECT * FROM PRODUCTES");
@@ -90,6 +91,7 @@ public class GestorBD {
         return llista;
     }
 
+    //Método para buscar dentro de la base de datos todos los encargos
     public List<Encarrec> cercarEncarrec() throws Exception{
         Statement cerca = conn.createStatement();
         ResultSet r = cerca.executeQuery("SELECT * FROM ENCARRECS");

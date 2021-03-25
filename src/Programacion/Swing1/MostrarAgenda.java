@@ -24,7 +24,6 @@ public class MostrarAgenda extends JFrame{
     private int numberOfEntries = 0;
     private int currentEntryIndex;
 
-
     private JButton browseButton;
     private JLabel emailLabel;
     private JTextField emailTextField;
@@ -329,6 +328,8 @@ public class MostrarAgenda extends JFrame{
                     "Error", JOptionPane.PLAIN_MESSAGE);
         browseButtonActionPerformed(evt);
     }
+
+    // Borrar a una persona dentro de la base de datos una vez se pulsa el boton.
     private void borrarButtonActionPerformed(ActionEvent evt)
     {
         int result = personQueries.borrarPerson(Integer.parseInt(idTextField.getText()));
@@ -340,6 +341,8 @@ public class MostrarAgenda extends JFrame{
                     "Error", JOptionPane.PLAIN_MESSAGE);
         browseButtonActionPerformed(evt);
     }
+
+    // Borrar a una persona dentro de la base de datos una vez se pulsa el boton.
     private void actualizarButtonActionPerformed(ActionEvent evt)
     {
         int result = personQueries.actualizarPerson(firstNameTextField.getText(),
