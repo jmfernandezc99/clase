@@ -1,8 +1,8 @@
 package Programacion.Pruebas.MundoPc;
 
 public class DispositivoEntrada {
-    private String tipoEntrada;
-    private String marca;
+    protected String tipoEntrada;
+    protected String marca;
 
     public DispositivoEntrada(String tipoEntrada, String marca){
         this.tipoEntrada = tipoEntrada;
