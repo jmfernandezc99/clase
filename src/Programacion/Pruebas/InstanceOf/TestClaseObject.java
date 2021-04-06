@@ -2,13 +2,20 @@ package Programacion.Pruebas.InstanceOf;
 
 import Programacion.Pruebas.Sobreescritura.*;
 
-public class TestInstanceOf {
+public class TestClaseObject {
     public static void main(String[] args) {
         Empleado empleado = new Empleado("Juan", 5000);
         determinarTipo(empleado);
 
-        empleado = new Gerente("Paco", 4000, "Informatica");
-        determinarTipo(empleado);
+        //empleado = new Gerente("Paco", 4000, "Informatica");
+        //determinarTipo(empleado);
+
+        Empleado empleado1 = new Empleado("Juan", 5000);
+        if (empleado.equals(empleado1)){
+            System.out.println("Son iguales en contenido");
+        } else {
+            System.out.println("No son iguales en contenido");
+        }
 
     }
 
