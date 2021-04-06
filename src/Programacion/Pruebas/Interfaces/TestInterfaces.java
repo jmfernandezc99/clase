@@ -7,7 +7,6 @@ public class TestInterfaces {
         IAccesoDatos interface2 = new ImplementacionOracle();
         //interface1.insertar();
         //interface2.insertar();
-
         imprimir(interface1);
         imprimir(interface2);
     }
