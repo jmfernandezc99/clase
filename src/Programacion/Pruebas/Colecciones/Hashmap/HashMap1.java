@@ -1,4 +1,4 @@
-package Programacion.Pruebas.Hashmap;
+package Programacion.Pruebas.Colecciones.Hashmap;
 
 import java.util.*;
 public class HashMap1 {
