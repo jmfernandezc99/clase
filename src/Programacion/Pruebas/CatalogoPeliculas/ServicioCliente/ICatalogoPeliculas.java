@@ -6,7 +6,7 @@ package Programacion.Pruebas.CatalogoPeliculas.ServicioCliente;
  */
 public interface ICatalogoPeliculas {
 
-    String NOMBRE_ARCHIVO = "C:\\Users\\Juanma\\IdeaProjects\\Clase\\src\\Programacion\\Pruebas\\CatalogoPeliculas\\Archivos\\peliculas.txt";
+    String NOMBRE_ARCHIVO = "C:\\Users\\Juanma\\IdeaProjects\\Clase\\src\\Programacion\\Pruebas\\CatalogoPeliculas\\peliculas.txt";
 
     void agregarPelicula(String nombrePelicula) throws Exception;
 

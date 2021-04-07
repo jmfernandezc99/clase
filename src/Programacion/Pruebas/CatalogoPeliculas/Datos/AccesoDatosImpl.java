@@ -69,7 +69,7 @@ public class AccesoDatosImpl implements IAccesoDatos {
             int index = 1;
             while (lectura != null && !salir){
                 if (buscar != null && buscar.equalsIgnoreCase(lectura)){
-                    resultado = "Nombre pelicula: " + lectura + " encontrada en posicion: " + index;
+                    resultado = "Nombre pelicula: " + lectura + "; Encontrada en posicion: " + index;
                     salir = true;
                 } else {
                     lectura = entrada.readLine();
