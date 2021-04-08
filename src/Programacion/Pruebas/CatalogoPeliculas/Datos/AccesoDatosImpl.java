@@ -31,13 +31,8 @@ public class AccesoDatosImpl implements IAccesoDatos {
             }
             entrada.close();
             return peliculas;
-        } catch (FileNotFoundException ex){
-            //Damos el formato que nosotros queremos a la excepcion.
-            ex.printStackTrace();
-            throw new LecturaDatosEx("Fallo al listar archivo: " + ex.getMessage());
         } catch (IOException ex){
-            ex.printStackTrace();
-            throw new LecturaDatosEx("Fallo al listar archivo: " + ex.getMessage());
+            throw new LecturaDatosEx("Fallo al listar del archivo " + nombreArchivo);
         }
     }
 
@@ -46,15 +41,11 @@ public class AccesoDatosImpl implements IAccesoDatos {
         File archivo = new File(nombreArchivo);
         try {
             PrintWriter salida = new PrintWriter(new FileWriter(archivo, anexar));
-            salida.println(pelicula.toString());
+            salida.println(pelicula);
             salida.close();
             System.out.println("Información añadida: " + pelicula);
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-            throw new EscrituraDatosEx("Fallo al escribir archivo: " + ex.getMessage());
-        } catch (IOException ex){
-            ex.printStackTrace();
-            throw new EscrituraDatosEx("Fallo al escribir archivo: " + ex.getMessage());
+        } catch (IOException ex) {
+            throw new EscrituraDatosEx("Fallo al escribir el archivo " + nombreArchivo);
         }
     }
 
@@ -66,24 +57,20 @@ public class AccesoDatosImpl implements IAccesoDatos {
             boolean salir = false;
             String resultado = null;
             String lectura = entrada.readLine();
-            int index = 1;
+            int posicion = 1;
             while (lectura != null && !salir){
                 if (buscar != null && buscar.equalsIgnoreCase(lectura)){
-                    resultado = "Nombre pelicula: " + lectura + "; Encontrada en posicion: " + index;
+                    resultado = "Nombre pelicula: " + lectura + "; Encontrada en posicion: " + posicion;
                     salir = true;
                 } else {
                     lectura = entrada.readLine();
-                    index++;
+                    posicion++;
                 }
             }
             entrada.close();
             return resultado;
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-            throw new LecturaDatosEx("Fallo al buscar archivo: " + ex.getMessage());
         } catch (IOException ex){
-            ex.printStackTrace();
-            throw new LecturaDatosEx("Fallo al buscar archivo: " + ex.getMessage());
+            throw new LecturaDatosEx("Fallo al buscar archivo.");
         }
     }
 
@@ -94,12 +81,9 @@ public class AccesoDatosImpl implements IAccesoDatos {
             var salida = new PrintWriter(new FileWriter(archivo));
             salida.close();
             System.out.println("Se ha creado el archivo " + nombreArchivo);
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-            throw new LecturaDatosEx("Fallo al crear archivo: " + ex.getMessage());
         } catch (IOException ex){
             ex.printStackTrace();
-            throw new LecturaDatosEx("Fallo al crear archivo: " + ex.getMessage());
+            throw new LecturaDatosEx("Fallo al crear archivo.");
         }
     }
 
