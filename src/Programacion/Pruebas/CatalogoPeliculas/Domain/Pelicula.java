@@ -1,7 +1,8 @@
 package Programacion.Pruebas.CatalogoPeliculas.Domain;
 
-/**
+/*
  * Clase pelicula para identificar las peliculas como objetos.
+ * DEFINIMOS ESTA CLASE COMO JAVABEAN
  */
 
 public class Pelicula {

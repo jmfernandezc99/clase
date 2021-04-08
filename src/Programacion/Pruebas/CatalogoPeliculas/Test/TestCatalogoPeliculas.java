@@ -1,5 +1,9 @@
 package Programacion.Pruebas.CatalogoPeliculas.Test;
 
+/*
+ * Metodo de prueba main para poner en practica el desarrollo realizado
+ */
+
 import Programacion.Pruebas.CatalogoPeliculas.ServicioCliente.CatalogoPeliculasImpl;
 import Programacion.Pruebas.CatalogoPeliculas.ServicioCliente.ICatalogoPeliculas;
 

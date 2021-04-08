@@ -1,7 +1,8 @@
 package Programacion.Pruebas.CatalogoPeliculas.Datos;
 
-/**
+/*
  * Archivo para implementar los metodos de la interface 'AccesoDatos.java'.
+ * TODAS LAS ESPECIFICACIONES NECESARIAS ESTAN EN LA INTERFACE
  */
 
 import Programacion.Pruebas.CatalogoPeliculas.Domain.Pelicula;

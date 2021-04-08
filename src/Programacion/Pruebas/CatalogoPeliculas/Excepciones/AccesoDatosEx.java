@@ -1,6 +1,6 @@
 package Programacion.Pruebas.CatalogoPeliculas.Excepciones;
 
-/**
+/*
  * Clase para excepciones con los hijos EscrituraDatosEx y
  * LecturaDatosEx respectivamente.
  */

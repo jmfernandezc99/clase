@@ -1,7 +1,9 @@
 package Programacion.Pruebas.CatalogoPeliculas.ServicioCliente;
 
-/**
- * Clase que implementa la interface 'ICatalogoPeliculas'.
+/*
+  Clase que implementa la interface 'ICatalogoPeliculas'.
+  ESTA CLASE SIRVE COMO CAPA CONECTANDO EL CLIENTE CON EL MANEJO DE DATOS EN EL FICHERO
+  TODAS LAS ESPECIFICACIONES NECESARIAS ESTAN EN LA INTERFACE
  */
 
 import Programacion.Pruebas.CatalogoPeliculas.Datos.*;
@@ -9,6 +11,7 @@ import Programacion.Pruebas.CatalogoPeliculas.Domain.Pelicula;
 import Programacion.Pruebas.CatalogoPeliculas.Excepciones.AccesoDatosEx;
 
 public class CatalogoPeliculasImpl implements ICatalogoPeliculas {
+    //ESTA CLASE TRABAJA CON EL OBJETO IAccesoDatos donde estara conectado con esta clase.
     private final IAccesoDatos datos;
 
     public CatalogoPeliculasImpl(){
