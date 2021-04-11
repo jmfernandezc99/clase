@@ -1,0 +1,25 @@
+Patrones de diseño a la hora de trabajar:
+En una arquitectura java empresarial, es comun que la aplicacion se divida en varias capas,
+y cada una trabaja una parte en especifico. Debido a la complejidad de los sitemas, existe
+este concepto de patrones de diseño. Incluimos temas de codificacion, division de
+responsabilidades, entre otros temas. Los patrones de diseño resuelven problemas.
+Un tema fundamental es el concepto de cohesion y acoplamiento, que entra en juego cuando
+manejamos varias capas logicas
+
+Capa de presentacion <-> Capa de Negocio <-> Capa de Datos
+
+Capa de Presentacion: Administra el flujo y presentacion de las pantallas del sistema.
+Capa de Negocio: Procesa la logica de negocio y/o Servicios del sistema.
+Capa de Datos: Obtiene y guarda informacion de las fuentes de datos, como una BD,
+archivo, etc.
+
+Cohesion y acoplamiento: El objetivo del diseño es minimizar costos de desarrollo.
+
+La cohesion es la medida en la que un componente de software se dedica a realizar solo
+la tarea para la cual fue creado, delegando las tareas complementarias a otros componentes.
+
+El acoplamiento es la medida en que los cambios de un componente tiende a necesitar cambios
+de otro componente.
+
+El objetivo del diseño de software es tener una alta cohesion y un bajo acoplamiento entre sus
+componentes de software.

@@ -1,4 +1,4 @@
-package Programacion.PruebasBD.Conexion;
+package Programacion.PruebasBD.ConexionTest1;
 
 /*
  * Clase test para probar conexion con base de datos y demas.
