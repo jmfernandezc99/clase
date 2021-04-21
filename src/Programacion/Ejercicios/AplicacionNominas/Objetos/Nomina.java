@@ -1,25 +1,25 @@
 package Programacion.Ejercicios.AplicacionNominas.Objetos;
 
-public class TrabajadorNominaCalculada {
+public class Nomina {
     private int idTrabajadorNominaCalculada;
     private String nif;
     private String nombreConvenio;
     private String importeTotalAPercibir;
 
-    public TrabajadorNominaCalculada() {
+    public Nomina() {
     }
 
-    public TrabajadorNominaCalculada(int idTrabajadorNominaCalculada) {
+    public Nomina(int idTrabajadorNominaCalculada) {
         this.idTrabajadorNominaCalculada = idTrabajadorNominaCalculada;
     }
 
-    public TrabajadorNominaCalculada(String nif, String nombreConvenio, String importeTotalAPercibir) {
+    public Nomina(String nif, String nombreConvenio, String importeTotalAPercibir) {
         this.nif = nif;
         this.nombreConvenio = nombreConvenio;
         this.importeTotalAPercibir = importeTotalAPercibir;
     }
 
-    public TrabajadorNominaCalculada(int idTrabajadorNominaCalculada, String nif, String nombreConvenio, String importeTotalAPercibir) {
+    public Nomina(int idTrabajadorNominaCalculada, String nif, String nombreConvenio, String importeTotalAPercibir) {
         this.idTrabajadorNominaCalculada = idTrabajadorNominaCalculada;
         this.nif = nif;
         this.nombreConvenio = nombreConvenio;
@@ -56,7 +56,7 @@ public class TrabajadorNominaCalculada {
 
     @Override
     public String toString() {
-        String sb = "TrabajadorNominaCalculada{" + "idTrabajadorNominaCalculada=" + idTrabajadorNominaCalculada +
+        String sb = "Nomina{" + "idTrabajadorNominaCalculada=" + idTrabajadorNominaCalculada +
                 ", nif='" + this.nif + '\'' +
                 ", nombreConvenio='" + this.nombreConvenio + '\'' +
                 ", importeTotalAPercibir='" + this.importeTotalAPercibir + '\'' +
