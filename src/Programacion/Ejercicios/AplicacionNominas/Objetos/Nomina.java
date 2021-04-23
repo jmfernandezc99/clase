@@ -1,8 +1,12 @@
 package Programacion.Ejercicios.AplicacionNominas.Objetos;
 
+import java.util.Date;
+
 public class Nomina {
     private int idTrabajadorNominaCalculada;
     private String nif;
+    private Date fechaInicio;
+    private Date fechaFin;
     private String nombreConvenio;
     private String importeTotalAPercibir;
 
@@ -38,6 +42,22 @@ public class Nomina {
         this.nif = nif;
     }
 
+    public Date getFechaInicio() {
+        return this.fechaInicio;
+    }
+
+    public void setFechaInicio(Date fechaInicio) {
+        this.fechaInicio = fechaInicio;
+    }
+
+    public Date getFechaFin() {
+        return this.fechaFin;
+    }
+
+    public void setFechaFin(Date fechaFin) {
+        this.fechaFin = fechaFin;
+    }
+
     public String getNombreConvenio() {
         return this.nombreConvenio;
     }
@@ -56,8 +76,10 @@ public class Nomina {
 
     @Override
     public String toString() {
-        String sb = "Nomina{" + "idTrabajadorNominaCalculada=" + idTrabajadorNominaCalculada +
+        String sb = "Nomina{" + "idTrabajadorNominaCalculada=" + this.idTrabajadorNominaCalculada +
                 ", nif='" + this.nif + '\'' +
+                ", fechaInicio=" + this.fechaInicio +
+                ", fechaFin=" + this.fechaFin +
                 ", nombreConvenio='" + this.nombreConvenio + '\'' +
                 ", importeTotalAPercibir='" + this.importeTotalAPercibir + '\'' +
                 '}';
