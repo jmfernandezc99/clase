@@ -1,11 +1,7 @@
 package Programacion.PruebasBD.BuenasPracticas.Ejercicio.Datos;
 
-import Programacion.PruebasBD.BuenasPracticas.Ejercicio.Datos.PersonaDAO;
-import Programacion.PruebasBD.BuenasPracticas.Ejercicio.Objetos.Persona;
-
 import java.sql.*;
 import java.util.*;
-import Programacion.PruebasBD.BuenasPracticas.Ejercicio.Objetos.Persona;
 
 import static Programacion.PruebasBD.BuenasPracticas.Ejercicio.Datos.Conexion.*;
 
