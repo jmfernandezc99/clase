@@ -1,12 +1,13 @@
 package Programacion.Ejercicios.AplicacionNominas.Objetos;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class Nomina {
     private int idNomina;
     private String nif;
-    private Date fechaInicio;
-    private Date fechaFin;
+    private java.sql.Date fechaInicio;
+    private java.sql.Date fechaFin;
     private int idConvenio;
     private String importeTotalAPercibir;
 
@@ -17,15 +18,19 @@ public class Nomina {
         this.idNomina = idTrabajadorNominaCalculada;
     }
 
-    public Nomina(String nif, int idConvenio, String importeTotalAPercibir) {
+    public Nomina(String nif, java.sql.Date fechaInicio, java.sql.Date fechaFin, int idConvenio, String importeTotalAPercibir) {
         this.nif = nif;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
         this.idConvenio = idConvenio;
         this.importeTotalAPercibir = importeTotalAPercibir;
     }
 
-    public Nomina(int idTrabajadorNominaCalculada, String nif, int idConvenio, String importeTotalAPercibir) {
-        this.idNomina = idTrabajadorNominaCalculada;
+    public Nomina(int idNomina, String nif, java.sql.Date fechaInicio, java.sql.Date fechaFin, int idConvenio, String importeTotalAPercibir) {
+        this.idNomina = idNomina;
         this.nif = nif;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
         this.idConvenio = idConvenio;
         this.importeTotalAPercibir = importeTotalAPercibir;
     }
@@ -42,19 +47,19 @@ public class Nomina {
         this.nif = nif;
     }
 
-    public Date getFechaInicio() {
+    public java.sql.Date getFechaInicio() {
         return this.fechaInicio;
     }
 
-    public void setFechaInicio(Date fechaInicio) {
+    public void setFechaInicio(java.sql.Date fechaInicio) {
         this.fechaInicio = fechaInicio;
     }
 
-    public Date getFechaFin() {
+    public java.sql.Date getFechaFin() {
         return this.fechaFin;
     }
 
-    public void setFechaFin(Date fechaFin) {
+    public void setFechaFin(java.sql.Date fechaFin) {
         this.fechaFin = fechaFin;
     }
 
