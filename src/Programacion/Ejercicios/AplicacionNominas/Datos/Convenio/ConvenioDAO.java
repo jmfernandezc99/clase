@@ -1,4 +1,4 @@
-package Programacion.Ejercicios.AplicacionNominas.Datos;
+package Programacion.Ejercicios.AplicacionNominas.Datos.Convenio;
 
 import Programacion.Ejercicios.AplicacionNominas.Objetos.Convenio;
 

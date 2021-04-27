@@ -1,4 +1,4 @@
-package Programacion.Ejercicios.AplicacionNominas.Datos;
+package Programacion.Ejercicios.AplicacionNominas.Datos.Nomina;
 
 import Programacion.Ejercicios.AplicacionNominas.Objetos.Nomina;
 
