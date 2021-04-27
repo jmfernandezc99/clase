@@ -111,16 +111,9 @@ public class Convenio {
 
     @Override
     public String toString() {
-        String sb = "Convenio{" + "idConvenio=" + this.idConvenio +
-                ", nombreConvenio='" + this.nombreConvenio + '\'' +
-                ", irpf=" + this.irpf +
-                ", contingenciasComunes=" + this.contingenciasComunes +
-                ", paro=" + this.paro +
-                ", formacionProfesional=" + this.formacionProfesional +
-                ", horasExtraordinarias=" + this.horasExtraordinarias +
-                ", horasExtraordinariasPorFuerzaMayor=" + this.horasExtraordinariasPorFuerzaMayor +
-                ", salarioBase=" + this.salarioBase +
-                '}';
-        return sb;
+        return this.idConvenio + "\t" + this.nombreConvenio + "\t" + this.irpf + "\t" +
+                this.contingenciasComunes + "\t" + this.paro + "\t" + this.formacionProfesional + "\t" +
+                + this.horasExtraordinarias + "\t" + this.horasExtraordinariasPorFuerzaMayor + "\t" +
+                this.salarioBase;
     }
 }

@@ -50,11 +50,6 @@ public class Empresa {
 
     @Override
     public String toString() {
-        String sb = "Empresa{" + "cif='" + this.cif + '\'' +
-                ", nombreEmpresa='" + this.nombreEmpresa + '\'' +
-                ", domicilio='" + this.domicilio + '\'' +
-                ", ccc='" + this.ccc + '\'' +
-                '}';
-        return sb;
+        return this.cif + "\t" + this.nombreEmpresa + "\t" + this.domicilio + "\t" + this.ccc;
     }
 }

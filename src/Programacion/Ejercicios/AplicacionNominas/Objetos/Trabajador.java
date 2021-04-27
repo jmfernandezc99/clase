@@ -61,12 +61,7 @@ public class Trabajador {
 
     @Override
     public String toString() {
-        String sb = "Trabajador{" + "nif='" + this.nif + '\'' +
-                ", nombreTrabajador='" + this.nombreTrabajador + '\'' +
-                ", numeroAfiliacion='" + this.numeroAfiliacion + '\'' +
-                ", puesto='" + this.puesto + '\'' +
-                ", grupoCotizacion='" + this.grupoCotizacion + '\'' +
-                '}';
-        return sb;
+        return this.nif + "\t" + this.nombreTrabajador + "\t" + this.numeroAfiliacion + "\t" +
+                this.puesto + "\t" + this.grupoCotizacion;
     }
 }

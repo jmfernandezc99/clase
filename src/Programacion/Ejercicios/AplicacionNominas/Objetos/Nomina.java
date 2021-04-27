@@ -3,35 +3,35 @@ package Programacion.Ejercicios.AplicacionNominas.Objetos;
 import java.util.Date;
 
 public class Nomina {
-    private int idTrabajadorNominaCalculada;
+    private int idNomina;
     private String nif;
     private Date fechaInicio;
     private Date fechaFin;
-    private String nombreConvenio;
+    private int idConvenio;
     private String importeTotalAPercibir;
 
     public Nomina() {
     }
 
     public Nomina(int idTrabajadorNominaCalculada) {
-        this.idTrabajadorNominaCalculada = idTrabajadorNominaCalculada;
+        this.idNomina = idTrabajadorNominaCalculada;
     }
 
-    public Nomina(String nif, String nombreConvenio, String importeTotalAPercibir) {
+    public Nomina(String nif, int idConvenio, String importeTotalAPercibir) {
         this.nif = nif;
-        this.nombreConvenio = nombreConvenio;
+        this.idConvenio = idConvenio;
         this.importeTotalAPercibir = importeTotalAPercibir;
     }
 
-    public Nomina(int idTrabajadorNominaCalculada, String nif, String nombreConvenio, String importeTotalAPercibir) {
-        this.idTrabajadorNominaCalculada = idTrabajadorNominaCalculada;
+    public Nomina(int idTrabajadorNominaCalculada, String nif, int idConvenio, String importeTotalAPercibir) {
+        this.idNomina = idTrabajadorNominaCalculada;
         this.nif = nif;
-        this.nombreConvenio = nombreConvenio;
+        this.idConvenio = idConvenio;
         this.importeTotalAPercibir = importeTotalAPercibir;
     }
 
-    public int getIdTrabajadorNominaCalculada() {
-        return this.idTrabajadorNominaCalculada;
+    public int getIdNomina() {
+        return this.idNomina;
     }
 
     public String getNif() {
@@ -58,12 +58,12 @@ public class Nomina {
         this.fechaFin = fechaFin;
     }
 
-    public String getNombreConvenio() {
-        return this.nombreConvenio;
+    public int getIdConvenio() {
+        return this.idConvenio;
     }
 
-    public void setNombreConvenio(String nombreConvenio) {
-        this.nombreConvenio = nombreConvenio;
+    public void setIdConvenio(int idConvenio) {
+        this.idConvenio = idConvenio;
     }
 
     public String getImporteTotalAPercibir() {
@@ -76,13 +76,7 @@ public class Nomina {
 
     @Override
     public String toString() {
-        String sb = "Nomina{" + "idTrabajadorNominaCalculada=" + this.idTrabajadorNominaCalculada +
-                ", nif='" + this.nif + '\'' +
-                ", fechaInicio=" + this.fechaInicio +
-                ", fechaFin=" + this.fechaFin +
-                ", nombreConvenio='" + this.nombreConvenio + '\'' +
-                ", importeTotalAPercibir='" + this.importeTotalAPercibir + '\'' +
-                '}';
-        return sb;
+        return this.idNomina + "\t" + this.nif + "\t" + this.fechaInicio + "\t" +
+                this.fechaFin + "\t" + this.idConvenio + "\t" + this.importeTotalAPercibir;
     }
 }
